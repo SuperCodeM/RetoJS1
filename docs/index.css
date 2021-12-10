@@ -1,3 +1,12 @@
+/* @media (min-width:800px) {
+  .grid-container{
+    background-color: red;
+  }
+} */
+
+/* html{
+  height:auto;
+} */
 *{
   transition: all 0.3s;
  } 
@@ -20,8 +29,8 @@
     margin: 0;
     text-align: center;
     font-family: calibri;
-    font-size: 120%;
-    min-height: 100%;
+    /* font-size: 120%;
+    min-height: 100%; */
     height: auto;
    /*  border: 2px solid;  */
   } 
@@ -46,8 +55,8 @@
   }
   header>img
   {
-    width: 140px;
-    height:90;
+    width: 200px;
+    height:100;
     background-color: transparent;
     margin-left: 500px;
     margin-top: -200px;
@@ -238,3 +247,64 @@
 {
   width: 100%;
 }
+/* @media (min-width: 1000px){
+  .grid-container{
+ /*    width: 30%; 
+  }
+} */
+/* @media (min-width: 425px){
+  /* html{
+    width: 90%;
+    height: 700px;
+    margin-top: 25%;
+    border: 3px solid;
+  } 
+  .encabezado 
+  {
+    position: relative;
+    background:transparent;
+    min-width: 700px;
+    width: 90%;
+    max-width: 800px;
+    padding: 5px;
+    height:500px;
+  }
+  .categoria 
+  {
+    opacity: 0.3;
+    text-align: left;  
+    margin-top: -10%;
+  }
+  .pregunta
+  {
+    padding: 5px;
+    margin: 10%;
+  }
+ 
+  .contenedor 
+  {
+    width: 90%;
+    height: 800px;
+  }
+  .btn 
+  {
+    background: white;
+    width: 100%;
+    max-width: 950px;
+    padding: 15px;
+    margin: 9px;
+    cursor: pointer;
+    font-size: 16px;
+  } 
+  .imagen 
+  {
+    object-fit: cover;
+    height: 400px; 
+    width: 100%;
+    background-color: slategray;
+    
+  } 
+ 
+}
+ */
+ 
