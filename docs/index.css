@@ -75,22 +75,30 @@
   }
   aside > img
   {
-    width: 110px;
-    height: 100px;
+    width: 200px;
+    height: 180px;
     margin-bottom: 3%;
     margin-left: 30%;
     margin-right: 28%;
+    padding-top: 3%;
   }
   aside > input
   {
     background: white;
-    width: 60%;
-    max-width: 450px;
-    padding: 3px;
+    width: 100%;
+    max-width: 950px;
+    padding: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 30px;
     text-align: center;
     margin-top: 2%;
+  }
+  .ms{
+    /* padding: 50px;
+    text-align: center; 
+    width: 100%;*/
+    height: 100px;
+    text-align: justify;
   }
   .reto{
     font-size: 40px;
@@ -218,18 +226,27 @@
 }
 .botonf
 {
-  padding: 7px;
-  width: 40%;
+  padding: 20px;
+  width: 60%;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 10%;
 }
 .resume
 {
   text-align: center;
-  width: 70%;
+  width: 80%;
   margin-left: 30%;
   margin-right: 28%;
-  font-size: 30px;
-  font-weight: lighter;
+  font-size: 60px;
+  font-weight: bolder;
+  
+  /* border: 2px solid; */
 }
+aside{
+  margin-top: 20%;
+}
+
 .nombre
 {
   text-transform: uppercase;
