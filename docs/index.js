@@ -39,26 +39,46 @@ function lets_go()
  y guardarlo, Muestra y Oculta Elementos, Ejecuta la acción de generar
 las preguntas del archivo base y elegirlas aleatoriamente*/
 {
- nombre= prompt("Por favor ingrese su nombre de Usuario para comenzar")
- if(nombre.trim()!="")
- {
-  base_preguntas = readText("base-preguntas.json")
-  interprete_bp = JSON.parse(base_preguntas)
-  escogerPreguntaAleatoria()
-  document.getElementById('other').style.display = 'none'; 
-  document.getElementById('l_reto').style.display = 'none'; 
-  document.getElementById('imacentral').style.display = 'none';
-  document.getElementById('ecabeza').style.display = 'block';
-  document.getElementById('btn1').style.display = 'block';
-  document.getElementById('btn2').style.display = 'block';
-  document.getElementById('btn3').style.display = 'block';
-  document.getElementById('btn4').style.display = 'block';
- }
- else
-  {
-   alert("Por favor digite su nombre para comenzar")
-  }
-}
+  Swal
+      .fire({
+              title: "Por favor escribe tu nombre",
+              input: "text",
+              showCancelButton: true,
+              confirmButtonText: "Guardar",
+              cancelButtonText: "Cancelar",
+              inputValidator: nombre => 
+               {
+                 // Si el valor es válido, debes regresar undefined. Si no, una cadena
+                 if (!nombre) 
+                   {
+                     return "Debe escribir su nombre para comenzar!";
+                   } 
+                else
+                   {
+                     return undefined;
+                   }
+               }
+            })
+     .then(resultado => 
+       {
+         if (resultado.value) 
+           {
+            nombre = resultado.value;
+            base_preguntas = readText("base-preguntas.json")
+            interprete_bp = JSON.parse(base_preguntas)
+            escogerPreguntaAleatoria()
+            document.getElementById('other').style.display = 'none'; 
+            document.getElementById('l_reto').style.display = 'none'; 
+            document.getElementById('imacentral').style.display = 'none';
+            document.getElementById('ecabeza').style.display = 'block';
+            document.getElementById('btn1').style.display = 'block';
+            document.getElementById('btn2').style.display = 'block';
+            document.getElementById('btn3').style.display = 'block';
+            document.getElementById('btn4').style.display = 'block';
+            console.log("Eres Bienvenido, " + nombre);
+          }
+       });
+ }       
 let pregunta
 let posibles_respuestas
 btn_correspondiente = 
